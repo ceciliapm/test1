@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>presentation_SIGR2021.knit</title>
+    <meta charset="utf-8" />
+    <script src="presentation_SIGR2021_files/header-attrs-2.9/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center
+title: "Présentation SIGR 2021"
+
+# Présentation
+&lt;!-- ![logo](images_presentation/logo.png "logo") --&gt;
+
+
+#### Cécilia Pignon-Mussaud
+
+.pull-left[
+*   IE Géomatique – [LIENSs](https://www.lienss.univ-lr.fr/) (LIttoral ENvironnement et Sociétés) – La Rochelle
+*   Unité mixte de recherche interdisciplinaire (La Rochelle Université – CNRS) : biologie, biochimie, géophysique, géographie, histoire…
+*   Assistance technique, appui à la recherche
+]
+
+![LIENSs](images_presentation/image_labo.PNG) 
+
+&lt;img src="images_presentation/pied_page.PNG" width="90%" /&gt;
+
+
+.footnote[_Ecole thématique SIGR 2021_]
+
+---
+# Champs de recherche
+** Caractérisation et adaptation du littoral au changement climatique : **
+
+- [Études sur la dynamique côtière](#3): évolution du trait de côte, 
+morphologie (profils topographiques), morphométrie …
+
+- [Impacts / adaptations aux risques naturels](#3) : érosion/submersion marine
+
+- [Suivi de populations](#3) : exemple : migration oiseaux, zone de reposoir/reproduction
+
+
+.footnote[_Ecole thématique SIGR 2021_]
+
+
+---
+
+# Outils
+- [SIG](#3) : ArcMap / ArcGisPro (ModelBuilder, ArcPy), QGIS (Modeleur graphique)
+
+- [ETL](#3) : FME, Talend Open Studio
+
+- [BD](#3): PostgreSQL/PostGIS
+
+- [Serveurs cartographiques](#3) : ArcgisServer-&gt; Mapserver
+
+- [Metadata](#3) : GeoNetwork via API Sextant (Ifremer)
+
+…un peu de Python et de R…
+
+
+-&gt; multiple outils, disciplines,  projets, thématiques ... 
+
+[![video](https://img1.picmix.com/output/stamp/thumb/0/4/7/8/1158740_b7d0b.gif) "video")
+
+&lt;iframe src="https://img1.picmix.com/output/stamp/thumb/0/4/7/8/1158740_b7d0b.gif?showcase=0" width="30%" height="400px"&gt;&lt;/iframe&gt;
+
+.footnote[_Ecole thématique SIGR 2021_]
+
+---
+
+# Problématiques de reproductibilité 
+
+.pull-left[
+**Études sur la dynamique côtière** : évolution du trait de côte, 
+morphologie (profils topographiques), morphométrie 
+
+- #### Caractérisation des îles 
+indicateur de robustesse morphologique
+
+![](images_presentation/robustesse.PNG) 
+]
+.pull-right[
+- #### Caractérisation des pentes externes : 
+rupture de pente, plateau récifal, zone de production sédimentaire…-&gt; typologie
+
+![](images_presentation/profil_bathy.PNG) 
+]
+
+
+.footnote[_Ecole thématique SIGR 2021_]
+
+---
+
+- #### Évolution diachronique : Suivis annuels et saisonniers
+Du trait de côte, des formes, des volumes, du couvert végétal…. 
+Ex : comparer des MNS issus des traitements photogrammétriques de la PF Drone (calcul de volumes, détecter des formes…)
+
+![](images_presentation/mns.PNG) 
+
+
+.footnote[_Ecole thématique SIGR 2021_]
+
+---
+**Consolider les données / Contrôle qualité?**  
+- #### Automatiser les traitements de données en entrée d'un SMA
+
+Projet LittoSIM : dispositif de simulation participative et de mise en situation pour la sensbilisation aux risques de submersion marine** : 
+
+Décrire précisément la relation données-modèle 
+Data Mapping : la liaison entre la source et les données cibles
+
+![](images_presentation/schema_mapping.PNG) 
+
+.footnote[_Ecole thématique SIGR 2021_]
+
+---
+
+**Automatiser les résultats d’un dispositif de simulation participative et de mise en situation pour la sensibilisation aux risques de submersion marine (LittoSIM)**  
+
+Comparer les phases de jeu, les communes, les archétypes, les ateliers…l'apprentissage des joueurs
+
+![](images_presentation/resultats_littosim.PNG) 
+
+.footnote[_Ecole thématique SIGR 2021_]
+
+---
+
+
+**Aide à la saisie des métadonnées** 
+
+
+Script R packages Geoflow, Geometa
+
+Documentation pour saisir au mieux les informations.
+
+
+- Programmer le lancement du script R lorsque le fichier .csv a été mis à jour.
+
+- Importer automatiquement dans Geonetwork les nouveaux .xml générés
+
+- Basculer le script Python vers R pour la génération des illustration ?
+
+- Gérer les flux dans Geoserver ??
+
+
+.footnote[_Ecole thématique SIGR 2021_]
+
+
+---
+class: center, middle
+
+# Merci à Olivier et Jakub pour leur aide!
+&lt;br/&gt;&amp;#x1F60E;   
+Slides created via the R packages:
+
+[**xaringan**](https://github.com/yihui/xaringan)&lt;br&gt;
+[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
